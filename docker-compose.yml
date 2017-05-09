@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3001"
+    volumes:
+      - .:/src
+  db:
+    image: mongo:3.0.2
