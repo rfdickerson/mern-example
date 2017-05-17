@@ -9,8 +9,8 @@ spec:
     - name: web
       port: 80
       protocol: TCP
-      targetPort: 3000
-      nodePort: 3000
+      targetPort: 30080
+      nodePort: 30080
   selector:
     app: web
     tier: frontend
@@ -51,7 +51,7 @@ spec:
         - name: MONGO_URL
           value: mongodb://mongo/comments
         ports:
-        - containerPort: 3000
+        - containerPort: 30000
           name: web
         volumeMounts:
         - name: web
